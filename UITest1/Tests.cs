@@ -17,6 +17,10 @@ namespace UITest1
         public Tests(Platform platform)
         {
             this.platform = platform;
+            app = ConfigureApp
+                .Android
+                .ApkFile("../../../AndroidProject/bin/Debug/android.apk")
+                .StartApp();
         }
 
         [SetUp]
